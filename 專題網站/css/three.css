@@ -1,0 +1,335 @@
+/* 基礎重置，消除瀏覽器內建的空白 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgba(26, 170, 127, 0.829);
+    font-family: sans-serif;
+    margin: 0; /* 建議加上這行，移除網頁預設白邊 */
+} 
+
+.header-section {
+      background-image: linear-gradient(rgba(177, 177, 177, 0.082), rgba(245, 245, 245, 0.514)), url('../images/FES.jpg');
+    
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 標題區塊置中 */
+.header-section {
+    width: 100%;
+    padding: 60px 10px;
+    text-align: center;      /* 讓文字水平置中 */
+    background-color: #34495e; /* 給標題一個背景色，方便確認有沒有吃到 CSS */
+}
+
+/* 作品網格置中 */
+.portfolio-grid {
+    display: flex;
+    justify-content: center; /* 水平置中卡片 */
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;         /* 手機版會自動換行 */
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* 讓整個網頁背景變色 */
+body {
+    background-color: #f0f8ff; /* 淺藍色 */
+}
+
+/* 如果想讓副標題也大一點 */
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+/* 修改 style.css 中的這個區塊 */
+a.portfolio-item {
+    text-decoration: none; /* 移除預設底線 */
+    color: inherit;        /* 繼承原本顏色 */
+    display: block;        /* 讓整個區域可點擊 */
+    
+    /* --- 核心修改：放大 --- */
+    width: 300px;          /* 增加寬度 (原本可能是 300px) */
+    min-height: 400px;     /* 設定最小高度，確保框框夠大 */
+    padding: 30px;         /* 增加內部留白，讓內容不擁擠 */
+    
+    /* --- 美化 --- */
+    background-color: #ffffff; /* 卡片背景色 */
+    border: 2px solid #e0e0e0; /* 輕微邊框 */
+    border-radius: 15px;      /* 圓角 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* 加一點淡淡的陰影 */
+    
+    /* --- 動畫效果 --- */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;          /* 卡片之間的間距 */
+}
+.header-section h1 {
+    font-size: 5rem; /* 字體再加大一點 */
+    color: #aef6ff;  /* 建議用白色，配上陰影質感很好 */
+    
+    /* 核心：文字陰影 (水平 垂直 模糊 顏色) */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); 
+    
+    font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; /* 確保用粗體黑體 */
+    letter-spacing: 5px; /* 字距拉開一點會更有設計感 */
+}
+.header-section {
+    /* ...原本的背景設定... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 幫文字外層包一個半透明的深色框 */
+.title-wrapper {
+    background-color: rgba(0, 0, 0, 0.3); /* 半透明黑 */
+    padding: 20px 40px;
+    border-radius: 15px;      /* 圓角 */
+    border: 2px solid rgba(255, 214, 214, 0.075); /* 白色細邊框 */
+    backdrop-filter: blur(5px); /* 背景模糊，這招很流行，像毛玻璃質感 */
+}
+.subtitle {
+    background-color: rgba(156, 91, 75, 0.801); /* 極淺的白色半透明背景 */
+    padding: 8px 20px;       /* 框框內留白 */
+    border-radius: 50px;     /* 膠囊型圓角 */
+    display: inline-block;   /* 讓背景框只跟文字一樣寬 */
+    margin-bottom: 80px;     /* 距離下面三格更遠一點 */
+    border: 1px solid rgba(102, 116, 84, 0.966); /* 隱約的邊框 */
+}
+.subtitle {
+    font-weight: 650;           /* 保持最粗 */
+    font-size: 2rem;            /* 這裡是關鍵！從 1.4rem 調大到 2rem */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    
+    /* 調整間距，確保大字體不會顯得擁擠 */
+    margin-top: 30px;           /* 增加一點跟大標題的距離 */
+    margin-bottom: 120px;       /* 跟下面框框的距離也再拉開一點 */
+    
+    display: block;
+    text-align: center;
+    letter-spacing: 3px;        /* 字距稍微拉開，大字才不會擠在一起 */
+}
+/* 修改 style.css 中的這個區塊 */
+.header-section h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #304c88d3;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+    letter-spacing: 5px;
+    
+    /* --- 核心修改：加個底色框 --- */
+    background-color: rgba(187, 132, 29, 0.164); /* 淡紫色半透明 */
+    padding: 20px 50px;       /* 框框內留白 */
+    border-radius: 15px;      /* 圓角 */
+    border: 3px solid rgba(84, 62, 209, 0.616); /* 白色半透明邊框 */
+    display: inline-block;    /* 讓框框只跟文字一樣寬 */
+    margin-bottom: 25px;      /* 跟下方副標題保持一點距離 */
+}
+/* 1. 漢堡選單容器定位 */
+.hamburger-menu {
+    position: absolute; /* 讓它固定在角落，不影響標題對齊 */
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    z-index: 1000;
+}
+
+/* 2. 漢堡按鈕圖示樣式 */
+.menu-btn {
+    background: rgba(40, 40, 40, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* 3. 下拉選單初始狀態（隱藏） */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* 緊接在按鈕下方 */
+    left: 0;
+    background-color: rgba(30, 30, 30, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+/* 4. 下拉選單內的連結樣式 */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(159, 144, 252, 0.5); /* 這裡可以用你標題的紫色 */
+}
+
+/* 5. 關鍵：滑鼠移入時展開選單 */
+.hamburger-menu:hover .dropdown-content {
+    display: block;
+}
+
+/* 讓按鈕在滑鼠移入時也有反應 */
+.hamburger-menu:hover .menu-btn {
+    background: rgba(159, 144, 252, 0.3);
+}
+/* 修改原本的 .dropdown-content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: rgba(30, 30, 30, 0.9);
+    min-width: 160px;
+    
+    /* 關鍵：增加一個透明的隱形區域填補間隙 */
+    padding-top: 10px; 
+    margin-top: 0; /* 移除 margin 改用 padding */
+}
+
+/* 確保滑鼠從按鈕移往選單時，始終處於「懸停」狀態 */
+.hamburger-menu::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* 加寬感應區 */
+    height: 300px;
+    z-index: -1;
+    display: none;
+}
+
+.hamburger-menu:hover::after {
+    display: block;
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 確保在所有內容下方 */
+    overflow: hidden;
+}
+
+#bgVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保影片填滿畫面且不變形 */
+}
+
+/* 加上之前討論過的半透明遮罩與模糊 */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.219); /* 深色遮罩 */
+    backdrop-filter: blur(5px);      /* 毛玻璃模糊 */
+}
+/* 1. 修正標題容器，確保它不會變形 */
+.title-container {
+    padding: 5px 40px; /* 縮小上下內距 */
+    margin-bottom: 10px; /* 縮小與下方文字的距離 */
+    min-height: auto; /* 取消可能的固定高度 */
+}
+
+.title-container h1 {
+    font-size: 3.0rem; /* 標題縮小，原本可能太大了 */
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* 2. 修正副標題（介紹文字） */
+.subtitle {
+    font-size: 1.0rem;  /* 文字縮小，讓它能塞進去 */
+    line-height: 1.6;   /* 設定適中的行高，避免看起來太擠 */
+    max-width: 80%;     /* 限制寬度，讓它自動折行 */
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+/* Apply to your title class or ID */
+.title-container h1 {
+  /* Existing styles go here (font size, margin, alignment, color, etc.) */
+  color: #4f6fda; /* Example: The current blue-purple color */
+
+  /* The magic code for the white border */
+  text-shadow: 
+    -1px -1px 0 #fff,  /* Top Left */
+     2px -1px 0 #fff,  /* Top Right */
+    -1px  1px 0 #fff,  /* Bottom Left */
+     1px  1px 0 #fff; /* Bottom Right */
+}
+.music-grid {
+    display: grid;
+    /* 將 300px 改為 180px，卡片就會縮小，且一排會出現更多張 */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px; /* 限制整體寬度，讓卡片靠中 */
+    margin: 0 auto;
+}
+.music-card {
+    background: #2a1b15; /* 維持你的咖啡色調 */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    border: 1px solid rgba(255,255,255,0.1); /* 加上細邊框增加質感 */
+}
+
+/* 縮小封面圖高度 */
+.thumbnail-container {
+    height: 110px; 
+    position: relative;
+}
+
+/* 讓播放圖示也變小 */
+.play-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* 調整文字區塊 */
+.music-info {
+    padding: 8px 12px;
+}
+
+.music-info p {
+    font-size: 0.8rem; /* 較小的字體顯得更精緻 */
+    color: #ddd;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 文字過長自動變 ... */
+}   

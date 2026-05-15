@@ -1,0 +1,502 @@
+/* 基礎重置，消除瀏覽器內建的空白 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgba(26, 170, 127, 0.829);
+    font-family: sans-serif;
+    margin: 0; /* 建議加上這行，移除網頁預設白邊 */
+} 
+
+.header-section {
+      background-image: linear-gradient(rgba(177, 177, 177, 0.082), rgba(245, 245, 245, 0.514)), url('../images/5海燈.jpg');
+    
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 標題區塊置中 */
+.header-section {
+    width: 100%;
+    padding: 60px 10px;
+    text-align: center;      /* 讓文字水平置中 */
+    background-color: #34495e; /* 給標題一個背景色，方便確認有沒有吃到 CSS */
+}
+
+/* 作品網格置中 */
+.portfolio-grid {
+    display: flex;
+    justify-content: center; /* 水平置中卡片 */
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;         /* 手機版會自動換行 */
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* 讓整個網頁背景變色 */
+body {
+    background-color: #f0f8ff; /* 淺藍色 */
+}
+
+/* 如果想讓副標題也大一點 */
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+/* 修改 style.css 中的這個區塊 */
+a.portfolio-item {
+    text-decoration: none; /* 移除預設底線 */
+    color: inherit;        /* 繼承原本顏色 */
+    display: block;        /* 讓整個區域可點擊 */
+    
+    /* --- 核心修改：放大 --- */
+    width: 300px;          /* 增加寬度 (原本可能是 300px) */
+    min-height: 400px;     /* 設定最小高度，確保框框夠大 */
+    padding: 30px;         /* 增加內部留白，讓內容不擁擠 */
+    
+    /* --- 美化 --- */
+    background-color: #ffffff; /* 卡片背景色 */
+    border: 2px solid #e0e0e0; /* 輕微邊框 */
+    border-radius: 15px;      /* 圓角 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* 加一點淡淡的陰影 */
+    
+    /* --- 動畫效果 --- */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;          /* 卡片之間的間距 */
+}
+.header-section h1 {
+    font-size: 5rem; /* 字體再加大一點 */
+    color: #aef6ff;  /* 建議用白色，配上陰影質感很好 */
+    
+    /* 核心：文字陰影 (水平 垂直 模糊 顏色) */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); 
+    
+    font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; /* 確保用粗體黑體 */
+    letter-spacing: 5px; /* 字距拉開一點會更有設計感 */
+}
+.header-section {
+    /* ...原本的背景設定... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 幫文字外層包一個半透明的深色框 */
+.title-wrapper {
+    background-color: rgba(0, 0, 0, 0.3); /* 半透明黑 */
+    padding: 20px 40px;
+    border-radius: 15px;      /* 圓角 */
+    border: 2px solid rgba(255, 214, 214, 0.075); /* 白色細邊框 */
+    backdrop-filter: blur(5px); /* 背景模糊，這招很流行，像毛玻璃質感 */
+}
+.subtitle {
+    background-color: rgba(149, 175, 89, 0.486); /* 極淺的白色半透明背景 */
+    padding: 8px 20px;       /* 框框內留白 */
+    border-radius: 50px;     /* 膠囊型圓角 */
+    display: inline-block;   /* 讓背景框只跟文字一樣寬 */
+    margin-bottom: 80px;     /* 距離下面三格更遠一點 */
+    border: 1px solid rgba(102, 116, 84, 0.966); /* 隱約的邊框 */
+}
+.subtitle {
+    font-weight: 650;           /* 保持最粗 */
+    font-size: 2rem;            /* 這裡是關鍵！從 1.4rem 調大到 2rem */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    
+    /* 調整間距，確保大字體不會顯得擁擠 */
+    margin-top: 30px;           /* 增加一點跟大標題的距離 */
+    margin-bottom: 120px;       /* 跟下面框框的距離也再拉開一點 */
+    
+    display: block;
+    text-align: center;
+    letter-spacing: 3px;        /* 字距稍微拉開，大字才不會擠在一起 */
+}
+/* 修改 style.css 中的這個區塊 */
+.header-section h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #baf7ff;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+    letter-spacing: 5px;
+    
+    /* --- 核心修改：加個底色框 --- */
+    background-color: rgba(187, 132, 29, 0.164); /* 淡紫色半透明 */
+    padding: 20px 50px;       /* 框框內留白 */
+    border-radius: 15px;      /* 圓角 */
+    border: 3px solid rgba(70, 55, 153, 0.616); /* 白色半透明邊框 */
+    display: inline-block;    /* 讓框框只跟文字一樣寬 */
+    margin-bottom: 25px;      /* 跟下方副標題保持一點距離 */
+}
+/* 1. 先確保 header-section 有定位基準 */
+.header-section {
+    position: relative; /* 必須加這行，按鈕才能定位在它左上角 */
+    /* 你原本的其他設定... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 1. 先確保 header-section 有定位基準 */
+.header-section {
+    position: relative; /* 必須加這行，按鈕才能定位在它左上角 */
+    /* 你原本的其他設定... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. 加入回首頁按鈕的樣式 */
+.home-button {
+    position: absolute;  /* 絕對定位 */
+    top: 20px;           /* 距離頂部 20px */
+    left: 20px;          /* 距離左邊 20px */
+    
+    /* 設計感：深色半透明背景，白色邊框 */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #ffffff;
+    padding: 8px 20px;
+    text-decoration: none; /* 移除超連結底線 */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: 0.3s;    /* 增加滑鼠移入時的平滑感 */
+    z-index: 100;        /* 確保它在最前面 */
+}
+
+.home-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+/* 標題外框：採用深灰色半透明，並加入模糊效果 */
+.title-container {
+    background-color: rgba(40, 40, 40, 0.6); /* 深色半透明，更有質感 */
+    backdrop-filter: blur(8px);             /* 毛玻璃模糊效果，重點！ */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 800px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+}
+
+/* 讓外面的毛玻璃框框寬度自動適應內容，不要佔滿一整條 */
+.title-container {
+    background-color: rgba(40, 40, 40, 0.5); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* 修改這裡：讓寬度隨字變大，並縮減內邊距 */
+    display: inline-block; 
+    padding: 20px 50px; 
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* 讓「靈感庫」三個字變大 */
+.header-section h1 {
+    color: #ffffff;
+    font-size: 5rem; /* 數字越大字越大，原本是 3.5 */
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 8px; /* 增加字距會更有設計感 */
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* 調整副標題的間距 */
+.subtitle {
+    display: block; /* 讓它換行 */
+    width: fit-content;
+    margin: 0 auto;
+    background-color: rgba(80, 90, 80, 0.7);
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 2.1rem;
+}
+/* 網格容器 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 固定每排三張 */
+    gap: 20px;                             /* 圖片之間的間隔 */
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;                        /* 整體置中 */
+}
+
+/* 每個作品項目的容器 */
+.gallery-item {
+    position: relative;        /* 讓內部的 overlay 可以絕對定位 */
+    aspect-ratio: 16 / 9;      /* 固定比例，你可以改成 1/1 (正方形) */
+    overflow: hidden;          /* 隱藏超出框框的部分 */
+    border-radius: 10px;
+    background-color: #333;    /* 預載入時的底色 */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* 確保圖片填滿且不變形 */
+    transition: transform 0.5s ease; /* 增加縮放動畫感 */
+}
+
+/* 遮罩層：初始狀態透明 */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* 半透明黑底 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;                     /* 預設隱藏 */
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.overlay .text {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* 滑鼠移上去後的變化 */
+.gallery-item:hover .overlay {
+    opacity: 1; /* 顯示文字遮罩 */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* 圖片輕微放大，增加互動感 */
+}
+/* 統一標題樣式並縮小 */
+.header-section h1 {
+    font-size: 3.0rem;    /* 從 3rem 縮小到 2.2rem，精緻很多 */
+    font-weight: bold;
+    margin-top: 20px;     /* 減少上方間距 */
+    margin-bottom: 10px;  /* 減少與副標題的距離 */
+    color: #bae4ff;
+    text-align: center;
+}
+
+
+/* 副標題稍微調小一點，並保持優雅 */
+.subtitle {
+    font-size: 1.2rem;    /* 稍微調大一點點，原本 0.8rem 有點太小 */
+    opacity: 0.85;
+    margin-top: 0;
+    text-align: center;
+}
+.title-container {
+    margin-top: 80px; /* 手動增加一點上方間距，微調視覺位置 */
+}
+/* 1. 縮小標題的大框框內距 */
+.title-container {
+    background-color: rgba(40, 40, 40, 0.5); 
+    backdrop-filter: blur(10px);
+    
+    display: inline-block; 
+    padding: 10px 40px;   /* 從原本的 20px 縮小到 10px，上下空間就出來了 */
+    border-radius: 12px;
+    margin-bottom: 10px;  /* 減少跟副標題的間距 */
+}
+
+/* 2. 稍微縮小大標題文字 */
+.header-section h1 {
+    font-size: 3rem;      /* 稍微調小，避免橫向太擠 */
+    margin: 0;
+    letter-spacing: 4px;
+}
+
+/* 3. 壓縮副標題 */
+.subtitle {
+    background-color: rgba(80, 90, 80, 0.7);
+    padding: 5px 20px;    /* 縮減上下內距 */
+    font-size: 0.95rem;   /* 字體縮小一點點 */
+    margin-top: 0;        /* 確保上方沒有多餘推擠 */
+}
+.header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 這行會把內容垂直置中 */
+    align-items: center;
+    /* height 保持不變 */
+}
+/* 讓靈感庫的框框變長 */
+.title-container {
+    /* 這裡的 padding 左右要設大一點，才能像首頁那麼長 */
+    padding: 10px 80px; 
+    
+    /* 確保有這行，兩邊才會是圓弧狀 */
+    border-radius: 50px; 
+    
+    /* 跟副標題保持一點距離 */
+    margin-bottom: 20px; 
+}
+
+/* 讓「靈感庫」三個字不要縮在一起 */
+.header-section h1 {
+    letter-spacing: 10px; /* 增加字與字之間的間距 */
+    font-size: 2.5rem;    /* 稍微調整大小 */
+    margin: 0;
+}
+
+/* 副標題的膠囊感 */
+.subtitle {
+    padding: 8px 30px;
+    border-radius: 20px;
+    background-color: rgba(60, 70, 60, 0.6); /* 稍微調暗一點點，更有質感 */
+}
+.title-container {
+    /* 其他設定維持不變... */
+    margin-top: -30px; /* 數值越大，往上移越多 */
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 確保它乖乖待在內容下面 */
+    
+    /* 1. 設置背景圖 */
+    background: url('../images/原神五週年賀圖.jpg') no-repeat center center/cover;
+    
+    /* 2. 同時調用多個濾鏡：模糊 + 亮度(遮罩感) */
+    /* blur: 像素越高越模糊 / brightness: 大於 1 會變亮，產生白色遮罩感 */
+    filter: blur(3px) brightness(0.5); 
+    
+    /* 3. 也可以透過透明度微調 */
+    opacity: 0.7; 
+    
+    /* 加上這行可以防止模糊邊緣出現白邊 */
+    transform: scale(1.1); 
+}
+/* 1. 漢堡選單容器定位 */
+.hamburger-menu {
+    position: absolute; /* 讓它固定在角落，不影響標題對齊 */
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    z-index: 1000;
+}
+
+/* 2. 漢堡按鈕圖示樣式 */
+.menu-btn {
+    background: rgba(40, 40, 40, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* 3. 下拉選單初始狀態（隱藏） */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* 緊接在按鈕下方 */
+    left: 0;
+    background-color: rgba(30, 30, 30, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+/* 4. 下拉選單內的連結樣式 */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(159, 144, 252, 0.5); /* 這裡可以用你標題的紫色 */
+}
+
+/* 5. 關鍵：滑鼠移入時展開選單 */
+.hamburger-menu:hover .dropdown-content {
+    display: block;
+}
+
+/* 讓按鈕在滑鼠移入時也有反應 */
+.hamburger-menu:hover .menu-btn {
+    background: rgba(159, 144, 252, 0.3);
+}
+/* 修改原本的 .dropdown-content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: rgba(30, 30, 30, 0.9);
+    min-width: 160px;
+    
+    /* 關鍵：增加一個透明的隱形區域填補間隙 */
+    padding-top: 10px; 
+    margin-top: 0; /* 移除 margin 改用 padding */
+}
+
+/* 確保滑鼠從按鈕移往選單時，始終處於「懸停」狀態 */
+.hamburger-menu::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* 加寬感應區 */
+    height: 300px;
+    z-index: -1;
+    display: none;
+}
+
+.hamburger-menu:hover::after {
+    display: block;
+}
+/* 分類標題樣式 */
+.category-title {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto 20px; /* 上方空大一點才有「拉開」的感覺 */
+    padding: 10px 15px;
+    
+    color: #9f90fc;         /* 使用你標題的紫色 */
+    font-size: 1.4rem;
+    border-left: 4px solid #9f90fc; /* 左側裝飾線 */
+    background: rgba(255, 255, 255, 0.05); /* 極淡的底色 */
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+}
+
+/* 調整網格下邊距，讓各組之間有明顯間隔 */
+.gallery-grid {
+    margin-bottom: 80px; 
+}

@@ -1,0 +1,301 @@
+/* 基礎重置，消除瀏覽器內建的空白 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgba(26, 170, 127, 0.829);
+    font-family: sans-serif;
+    margin: 0; /* 建議加上這行，移除網頁預設白邊 */
+} 
+
+.header-section {
+      background-image: linear-gradient(rgba(110, 57, 57, 0.473), rgba(0, 0, 0, 0.4)), url('../images/background.jpg');
+    
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 標題區塊置中 */
+.header-section {
+    width: 100%;
+    padding: 60px 10px;
+    text-align: center;      /* 讓文字水平置中 */
+    background-color: #34495e; /* 給標題一個背景色，方便確認有沒有吃到 CSS */
+}
+
+/* 作品網格置中 */
+.portfolio-grid {
+    display: flex;
+    justify-content: center; /* 水平置中卡片 */
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;         /* 手機版會自動換行 */
+}
+
+/* 作品卡片外框 */
+.portfolio-item {
+    border: 2px solid #ecf0f1;
+    border-radius: 10px;
+    width: 350px;
+    padding: 30px;
+    min-height: 500px; /* 建議把最小高度調高一點點，給圖片留空間 */
+    text-align: center;
+    
+    /* --- 新增以下兩行 --- */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 讓內容水平居中 */
+}
+
+/* 圖片大小控制 */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+    /* 1. 先把圖片推到底部 */
+    margin-top: auto; 
+    
+    /* 2. 重點：加上這行，確保圖片跟文字之間至少有 30px 的距離，不會黏死 */
+    padding-top: 30px; 
+    
+    /* 如果你想讓圖片離卡片底邊也有一點距離 */
+    margin-bottom: 10px;
+}
+/* 讓整個網頁背景變色 */
+body {
+    background-color: #f0f8ff; /* 淺藍色 */
+}
+
+/* 讓標題置中並變成紫色 */
+h1 {
+    text-align: center;
+    color: #5c577a;
+    margin-top: 30px;
+}
+.header-section h1 {
+    font-size: 3rem;      /* 4rem 約為預設值的 4 倍大，你可以根據感覺調整數字 */
+    font-weight: bold;   /* 讓字體加粗 */
+    margin-bottom: 15px; /* 跟下方副標題保持一點距離 */
+    color: #9f90fc;      /* 保持你喜歡的紫色 */
+}
+
+/* 如果想讓副標題也大一點 */
+.subtitle {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+/* 修改 style.css 中的這個區塊 */
+a.portfolio-item {
+    text-decoration: none; /* 移除預設底線 */
+    color: inherit;        /* 繼承原本顏色 */
+    display: block;        /* 讓整個區域可點擊 */
+    
+    /* --- 核心修改：放大 --- */
+    width: 300px;          /* 增加寬度 (原本可能是 300px) */
+    min-height: 400px;     /* 設定最小高度，確保框框夠大 */
+    padding: 30px;         /* 增加內部留白，讓內容不擁擠 */
+    
+    /* --- 美化 --- */
+    background-color: #ffffff; /* 卡片背景色 */
+    border: 2px solid #e0e0e0; /* 輕微邊框 */
+    border-radius: 15px;      /* 圓角 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* 加一點淡淡的陰影 */
+    
+    /* --- 動畫效果 --- */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;          /* 卡片之間的間距 */
+}
+
+/* 滑鼠移上去時的特效 */
+a.portfolio-item:hover {
+    transform: translateY(-5px); /* 向上浮動 */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* 陰影加深 */
+    border-color: #6a5acd;     /* 邊框變紫色 */
+}
+.header-section h1 {
+    font-size: 5rem; /* 字體再加大一點 */
+    color: #aef6ff;  /* 建議用白色，配上陰影質感很好 */
+    
+    /* 核心：文字陰影 (水平 垂直 模糊 顏色) */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); 
+    
+    font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; /* 確保用粗體黑體 */
+    letter-spacing: 5px; /* 字距拉開一點會更有設計感 */
+}
+.header-section {
+    /* ...原本的背景設定... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 幫文字外層包一個半透明的深色框 */
+.title-wrapper {
+    background-color: rgba(0, 0, 0, 0.3); /* 半透明黑 */
+    padding: 20px 40px;
+    border-radius: 15px;      /* 圓角 */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* 白色細邊框 */
+    backdrop-filter: blur(5px); /* 背景模糊，這招很流行，像毛玻璃質感 */
+}
+.subtitle {
+    background-color: rgba(149, 175, 89, 0.486); /* 極淺的白色半透明背景 */
+    padding: 8px 20px;       /* 框框內留白 */
+    border-radius: 50px;     /* 膠囊型圓角 */
+    display: inline-block;   /* 讓背景框只跟文字一樣寬 */
+    margin-bottom: 80px;     /* 距離下面三格更遠一點 */
+    border: 1px solid rgba(102, 116, 84, 0.966); /* 隱約的邊框 */
+}
+.subtitle {
+    font-weight: 650;           /* 保持最粗 */
+    font-size: 2rem;            /* 這裡是關鍵！從 1.4rem 調大到 2rem */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    
+    /* 調整間距，確保大字體不會顯得擁擠 */
+    margin-top: 30px;           /* 增加一點跟大標題的距離 */
+    margin-bottom: 120px;       /* 跟下面框框的距離也再拉開一點 */
+    
+    display: block;
+    text-align: center;
+    letter-spacing: 3px;        /* 字距稍微拉開，大字才不會擠在一起 */
+}
+/* 修改 style.css 中的這個區塊 */
+.header-section h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #baf7ff;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+    letter-spacing: 5px;
+    
+    /* --- 核心修改：加個底色框 --- */
+    background-color: rgba(106, 90, 205, 0.3); /* 淡紫色半透明 */
+    padding: 20px 50px;       /* 框框內留白 */
+    border-radius: 15px;      /* 圓角 */
+    border: 3px solid rgb(195, 157, 226); /* 白色半透明邊框 */
+    display: inline-block;    /* 讓框框只跟文字一樣寬 */
+    margin-bottom: 25px;      /* 跟下方副標題保持一點距離 */
+}
+/* 1. 先確保 header-section 有定位基準 */
+.header-section {
+    position: relative; /* 必須加這行，按鈕才能定位在它左上角 */
+    /* 你原本的其他設定... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 統一標題樣式並縮小 */
+.header-section h1 {
+    font-size: 3.0rem;    /* 從 3rem 縮小到 2.2rem，精緻很多 */
+    font-weight: bold;
+    margin-top: 20px;     /* 減少上方間距 */
+    margin-bottom: 10px;  /* 減少與副標題的距離 */
+    color: #bae4ff;
+    text-align: center;
+}
+
+/* 副標題稍微調小一點，並保持優雅 */
+.subtitle {
+    font-size: 1.2rem;    /* 稍微調大一點點，原本 0.8rem 有點太小 */
+    opacity: 0.85;
+    margin-top: 0;
+    text-align: center;
+}
+.title-container {
+    margin-top: 80px; /* 手動增加一點上方間距，微調視覺位置 */
+}
+/* 漢堡選單容器定位 */
+.hamburger-menu {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 1000;
+}
+
+/* 漢堡圖示樣式 */
+.menu-btn {
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(8px); /* 增加毛玻璃質感 */
+}
+
+.bar {
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+/* 下拉選單 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: rgba(20, 20, 20, 0.9);
+    min-width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+/* 連結樣式 */
+.dropdown-content a {
+    color: #eee;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(159, 144, 252, 0.4); /* 使用你喜歡的紫色調 */
+    color: #fff;
+}
+
+/* 滑鼠移入或點擊啟動時顯示 */
+.hamburger-menu:hover .dropdown-content,
+.hamburger-menu.active .dropdown-content {
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: rgba(30, 30, 30, 0.9);
+    min-width: 160px;
+    
+    /* 關鍵：增加一個透明的隱形區域填補間隙 */
+    padding-top: 10px; 
+    margin-top: 0; /* 移除 margin 改用 padding */
+}
+
+/* 確保滑鼠從按鈕移往選單時，始終處於「懸停」狀態 */
+.hamburger-menu::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* 加寬感應區 */
+    height: 300px;
+    z-index: -1;
+    display: none;
+}
+body {
+    /* 從稍微深一點的顏色過渡到純黑或深灰 */
+    background: linear-gradient(to bottom, #3379c4, #b6d8ff); 
+    background-attachment: fixed; /* 讓背景固定，滾動時更有質感 */
+}
